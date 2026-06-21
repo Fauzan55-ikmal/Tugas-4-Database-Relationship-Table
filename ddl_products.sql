@@ -1,6 +1,7 @@
 -- DDL untuk membuat dan memodifikasi tabel Barang
 USE D112521003_eecommercee;
 
+-- QUERY UNTUK TUGAS 3
 -- Hapus tabel lama jika ada, agar script bisa dijalankan ulang dengan bersih
 DROP TABLE IF EXISTS Products;
 DROP TABLE IF EXISTS Barang;
@@ -40,3 +41,9 @@ ALTER TABLE Products ADD PRIMARY KEY (id);
 
 -- Menambahkan kolom Category dengan tipe data ENUM
 ALTER TABLE Products ADD Category ENUM ('Makanan', 'Minuman', 'Lain-Lain') AFTER Name;
+
+-- end QUERY UNTUK TUGAS 3
+
+-- QUERY UNTUK TUGAS 4
+
+-- end QUERY UNTUK TUGAS 4

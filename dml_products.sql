@@ -1,5 +1,6 @@
 USE D112521003_eecommercee;
 
+-- awal QUERY UNTUK TUGAS 3
 -- 1. Bersihkan tabel agar data bersih dari awal
 DELETE FROM Products;
 
@@ -27,3 +28,9 @@ DELETE FROM Products WHERE id = 'P0006';
 SELECT id AS 'Kode', Name AS 'Nama', Price AS 'Harga', Quantity AS 'Stock' FROM Products;
 SELECT * FROM Products WHERE Name LIKE '%Pasta%';
 SELECT * FROM Products WHERE Name LIKE '%mie%';
+
+-- end QUERY UNTUK TUGAS 3
+
+-- QUERY UNTUK TUGAS 4
+
+-- end QUERY UNTUK TUGAS 4
