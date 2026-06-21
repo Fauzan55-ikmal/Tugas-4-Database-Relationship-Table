@@ -54,3 +54,20 @@ UPDATE Products SET Price = 20000 WHERE id = 'P0001';
 -- Cek hasil akhir
 SELECT * FROM Products;
 
+-- Update Harga
+UPDATE Products SET Price = 30000 WHERE id = 'P0002';
+UPDATE Products SET Price = 50000 WHERE id = 'P0003';
+UPDATE Products SET Price = 65000 WHERE id = 'P0004';
+UPDATE Products SET Price = 75000 WHERE id = 'P0005';
+
+-- Insert dan Delete
+INSERT INTO Products (id, Name, Price, Quantity) VALUES ('P0006', 'Pizza Full Cheese', 55000, 12);
+DELETE FROM Products WHERE id = 'P0006';
+
+-- Query dengan Alias (AS)
+SELECT id AS 'Kode', Name AS 'Nama', Price AS 'Harga', Quantity AS 'Stock' FROM Products;
+
+-- Query menggunakan LIKE (pencarian teks)
+SELECT * FROM Products WHERE name LIKE '%Pasta%';
+SELECT * FROM Products WHERE name LIKE '%mie%';
+
