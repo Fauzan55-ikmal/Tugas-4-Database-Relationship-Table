@@ -31,3 +31,8 @@ ALTER TABLE Products
     CHANGE COLUMN Jumlah Quantity INT(10) UNSIGNED NOT NULL DEFAULT 0,
     ADD COLUMN Created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP();
 
+-- Menjadikan kolom id sebagai Primary Key
+ALTER TABLE Products ADD PRIMARY KEY (id);
+
+-- Menambahkan kolom Category dengan tipe data ENUM
+ALTER TABLE Products ADD Category ENUM ('Makanan', 'Minuman', 'Lain-Lain') AFTER Name;
