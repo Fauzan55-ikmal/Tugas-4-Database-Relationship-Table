@@ -1,6 +1,10 @@
 -- DDL untuk membuat dan memodifikasi tabel Barang
 USE D112521003_eecommercee;
 
+-- Hapus tabel lama jika ada, agar script bisa dijalankan ulang dengan bersih
+DROP TABLE IF EXISTS Products;
+DROP TABLE IF EXISTS Barang;
+
 -- Create awal
 CREATE TABLE Barang (
     Kode INT,
