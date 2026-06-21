@@ -1,4 +1,4 @@
-USE D112521003_eecommerce;
+USE d112521003_eecommercee;
 
 CREATE TABLE products (
     id VARCHAR(10) NOT NULL,
