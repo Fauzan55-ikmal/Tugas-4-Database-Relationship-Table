@@ -8,5 +8,7 @@ Thumbs.db
 # Mengabaikan file yang mungkin berisi sensitivitas atau temporary
 *.sql.bak
 
+asset/
+
 # Mengabaikan file gambar screenshot agar tidak masuk ke GitHub
 *.png
