@@ -1,0 +1,12 @@
+# Mengabaikan file konfigurasi XAMPP dan Windows
+.vscode/
+Thumbs.db
+*.log
+*.tmp
+*.bak
+
+# Mengabaikan file yang mungkin berisi sensitivitas atau temporary
+*.sql.bak
+
+# Mengabaikan file gambar screenshot agar tidak masuk ke GitHub
+*.png
