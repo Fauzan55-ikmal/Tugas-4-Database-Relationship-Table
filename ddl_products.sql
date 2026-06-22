@@ -45,5 +45,17 @@ ALTER TABLE Products ADD Category ENUM ('Makanan', 'Minuman', 'Lain-Lain') AFTER
 -- end QUERY UNTUK TUGAS 3
 
 -- QUERY UNTUK TUGAS 4
+-- Membuat tabel wishlist
+CREATE TABLE wishlist (
+    id INT NOT NULL AUTO_INCREMENT,
+    Product_id VARCHAR(10) NOT NULL,
+    Description TEXT,
+    PRIMARY KEY (id)
+);
 
+-- Menambahkan relasi foreign key dengan aturan CASCADE
+ALTER TABLE wishlist 
+ADD CONSTRAINT fk_wishlist_product 
+FOREIGN KEY (Product_id) REFERENCES products(id) 
+ON DELETE CASCADE ON UPDATE CASCADE;
 -- end QUERY UNTUK TUGAS 4
