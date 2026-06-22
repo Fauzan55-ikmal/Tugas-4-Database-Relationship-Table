@@ -70,5 +70,21 @@ CREATE TABLE wishlist (
     ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+-- Membuat tabel customers
+CREATE TABLE customers (
+    id INT NOT NULL AUTO_INCREMENT,
+    email VARCHAR(100) NOT NULL,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100),
+    PRIMARY KEY (id),
+    UNIQUE KEY email_unique (email)
+);
 
+-- Menambahkan kolom customer_id ke tabel wishlist
+ALTER TABLE wishlist ADD customer_id INT;
+
+-- Menambahkan relasi foreign key ke tabel customers
+ALTER TABLE wishlist 
+ADD CONSTRAINT fk_wishlist_customer 
+FOREIGN KEY (customer_id) REFERENCES customers(id);
 -- end QUERY UNTUK TUGAS 4
