@@ -37,4 +37,31 @@ INSERT INTO wishlist (Product_id, Description) VALUES ('P0001', 'Makanan Kesukaa
 
 -- Menampilkan hasil
 SELECT * FROM wishlist;
+
+-- 1. Memasukkan data awal
+INSERT INTO wishlist (Product_id, Description) VALUES ('P0001', 'Makanan Kesukaan');
+
+-- 2. Simulasi pengujian ON DELETE CASCADE: Memasukkan data baru
+INSERT INTO products (id, name, category, price, quantity) VALUES ('PXXXX', 'Contoh', 'Lain-Lain', 12500, 12);
+INSERT INTO wishlist (Product_id, Description) VALUES ('PXXXX', 'Favorit Saya');
+
+-- 3. Verifikasi data sebelum di-delete
+SELECT * FROM wishlist;
+
+-- 4. Menghapus data di products untuk menguji CASCADE
+DELETE FROM products WHERE id = 'PXXXX';
+
+-- 5. Verifikasi bahwa data di wishlist ikut terhapus otomatis
+SELECT * FROM wishlist;
+
+-- 6. Query pengujian JOIN
+SELECT 
+    w.id AS wishlist_id, 
+    p.id AS product_id, 
+    p.name AS product_name, 
+    w.description AS wishlist_description 
+FROM wishlist AS w 
+JOIN products AS p ON (w.Product_id = p.id);
+
+
 -- end QUERY UNTUK TUGAS 4
