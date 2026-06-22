@@ -63,5 +63,20 @@ SELECT
 FROM wishlist AS w 
 JOIN products AS p ON (w.Product_id = p.id);
 
+-- Memasukkan data ke tabel customers
+INSERT INTO customers (email, first_name, last_name) 
+VALUES ('fauzanfauziafauzi@gmail.com', 'Fauzan', 'Fauzia Fauzi');
 
+-- Mengupdate data wishlist agar memiliki relasi dengan customer
+UPDATE wishlist SET customer_id = 1 WHERE id = 1;
+
+-- Verifikasi data dengan JOIN 3 tabel
+SELECT 
+    customers.email, 
+    products.id, 
+    products.name, 
+    wishlist.description
+FROM wishlist
+JOIN products ON (products.id = wishlist.Product_id)
+JOIN customers ON (customers.id = wishlist.customer_id);
 -- end QUERY UNTUK TUGAS 4
