@@ -32,5 +32,9 @@ SELECT * FROM Products WHERE Name LIKE '%mie%';
 -- end QUERY UNTUK TUGAS 3
 
 -- QUERY UNTUK TUGAS 4
+-- Memasukkan data ke tabel wishlist
+INSERT INTO wishlist (Product_id, Description) VALUES ('P0001', 'Makanan Kesukaan');
 
+-- Menampilkan hasil
+SELECT * FROM wishlist;
 -- end QUERY UNTUK TUGAS 4
