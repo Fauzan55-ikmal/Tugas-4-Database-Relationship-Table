@@ -58,4 +58,17 @@ ALTER TABLE wishlist
 ADD CONSTRAINT fk_wishlist_product 
 FOREIGN KEY (Product_id) REFERENCES products(id) 
 ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- Membuat tabel wishlist
+CREATE TABLE wishlist (
+    id INT NOT NULL AUTO_INCREMENT,
+    Product_id VARCHAR(10) NOT NULL,
+    Description TEXT,
+    PRIMARY KEY (id),
+    CONSTRAINT fk_wishlist_product
+    FOREIGN KEY (Product_id) REFERENCES products(id)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
 -- end QUERY UNTUK TUGAS 4
